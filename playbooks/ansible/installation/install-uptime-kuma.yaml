@@ -1,6 +1,6 @@
 ---
 - name: install uptime-kuma latest
-  hosts: "{{ hosts }}"
+  hosts: "{{ kuma_hosts }}"
   become: yes
   become_user: "{{ lookup('env','USER') }}"
   tasks:
