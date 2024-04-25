@@ -1,5 +1,5 @@
 ---
-- name: deploy uptime-kuma latest
+- name: install uptime-kuma latest
   hosts: "{{ hosts }}"
   become: yes
   become_user: "{{ lookup('env','USER') }}"
@@ -7,7 +7,7 @@
   - name: create new volume
     community.docker.docker_volume:
       name: uptime-kuma
-  - name: deploy uptime-kuma
+  - name: install uptime-kuma
     community.docker.docker_container:
       name: uptime-kuma
       image: "louislam/uptime-kuma:latest"
